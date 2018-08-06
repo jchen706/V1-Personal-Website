@@ -1,0 +1,510 @@
+body {
+ font-family: "Trebuchet MS", Helvetica, sans-serif;
+ box-sizing: border-box;
+ overflow-y: scroll;
+ overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+
+}
+
+.header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background: white;
+    margin: 0;
+    border-bottom: 10px solid white;
+}
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #aaff80 (light blue) on hover */
+li a:hover {
+    background-color:  #4066cc;
+}
+
+
+
+
+@media (min-width:100px)  { /* smartphones, iPhone, portrait 480x320 phones */
+
+    * {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .grid-container {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows:  auto auto auto auto auto auto;
+        width: 100vw;
+        height: 100vh;
+        grid-gap: 5px;
+        background: #204060;
+    }
+
+
+    .center {
+        width: inherit;
+        height: 15vh;
+        grid-row: 2/3;
+        background: transparent;
+    }
+
+    .hao {
+        font-size: 30vw;
+        text-align: center;
+        font-weight:bold;
+        margin: 0;
+        border: 0;
+    }
+
+
+
+    .photo {
+        width: inherit;
+        grid-row: 4/5;
+        grid-column: auto;
+        text-align: center;
+        padding: 0;
+    }
+
+    .picture {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .introduction {
+        width: inherit;
+        height: fit-content;
+        grid-row: 5/6;
+        grid-column: auto;
+        text-align: center;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        line-height: 4.3vh;
+
+    }
+
+    .footer1 {
+        height: auto;
+        width: inherit;
+        grid-row: 6/7;
+        font-size: 2vh;
+        padding: 0;
+        line-height: 1.2vh;
+        background: black;
+    }
+
+    .publication {
+        margin-left: 4vw;
+    }
+
+
+    .English1 {
+        text-decoration: none;
+    }
+
+    .name1 {
+        font-weight: bold;
+        font-size: 10vw;
+        padding: 0;
+    }
+
+    .name2 {
+        font-size: 5vw;
+        padding: 0;
+    }
+
+    .contacts {
+        padding: 0;
+        margin:0;
+        text-align: center;
+    }
+
+    .social-icon {
+        width: 10vw;
+        height: 10vw;
+        padding-left: 25px;
+    }
+
+    .middle {
+        grid-row: 3/4;
+        font-size: 5vw;
+        grid-column: auto;
+        text-align: center;
+    }
+
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+    .hao {
+        font-size: 25vw;
+    }
+
+    grid-container {
+        grid-gap: 0;
+    }
+
+    .introduction {
+        background: #204060;
+    }
+
+    .contacts {
+        padding: 0;
+        margin:0;
+        text-align: center;
+        background: #204060;
+    }
+
+}
+@media (min-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+
+
+    .center {
+        font-size: 20vw;
+        height: auto;
+    }
+
+    .middle {
+        font-size: 4vw;
+    }
+
+    .photo{
+        height: auto;
+    }
+
+    .picture {
+        width: 30vh;
+        height: 30vh;
+    }
+
+
+    .introduction {
+        height: auto;
+        padding: 0;
+    }
+
+    .name1 {
+        font-size: 10vw;
+    }
+
+    .name2 {
+        font-size: 5vw;
+    }
+
+    .social-icon {
+        width: 10vw;
+        height: 10vw;
+    }
+
+
+
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+    .center {
+        font-size: 15vw;
+        height: auto;
+    }
+
+    .middle {
+        font-size: 5vw;
+    }
+
+    .photo{
+        height: auto;
+    }
+
+    .picture {
+        width: 20vh;
+        height: 20vh;
+    }
+
+
+    .introduction {
+        height: auto;
+        padding: 0;
+    }
+
+    .name1 {
+        font-size: 8vw;
+    }
+
+    .name2 {
+        font-size: 5vw;
+    }
+
+    .social-icon {
+        width: 7vw;
+        height: 7vw;
+    }
+
+}
+
+
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+
+    .grid-container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        background-color: #204060;
+        /*background-image: url("space.jpg");*/
+        grid-gap: 10px;
+
+    }
+
+
+
+    .center {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        width: 100vw;
+    }
+
+    .hao {
+        text-align: center;
+        font-size: 20vw;
+        font-weight:bold;
+        margin: 0;
+        border: 0;
+    }
+
+    .photo {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding-left: 8vw;
+        width: fit-content;
+        height: 16vh;
+        text-align: left;
+    }
+
+    .picture {
+        width: 15vw;
+        height: 15vw;
+    }
+
+
+    .middle {
+        grid-row: 4/6;
+        grid-column: 2/4;
+        text-align: center;
+        font-size: 2.5vw;
+        line-height: 0;
+    }
+
+    .English1 {
+        text-decoration: none;
+
+    }
+
+
+    .introduction {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background: transparent;
+        padding-left: 2.5vw;
+        margin-top: 50px;
+        text-align: left;
+    }
+
+    .name1 {
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0px;
+        border: 1px;
+        padding-left: 35px;
+    }
+    .name2 {
+        padding-top: 0px;
+        font-size: 15px;
+        margin: 1px;
+        border: 1px;
+        padding-left: 20px;
+        letter-spacing: 4px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        padding-left: 25px;
+
+    }
+
+    .contacts {
+        padding-left: 35px;
+        text-align: left;
+    }
+
+    .footer1 {
+        grid-column: 1/4;
+        grid-row: 6/7;
+        background: black;
+    }
+
+}
+
+@media (min-width: 1281px) {
+    .grid-container {
+        height: 100%;
+    }
+
+
+
+
+    .center {
+        grid-column: 1/4;
+        grid-row: 2/4;
+        background: transparent;
+        height: 52.75vh;
+        width: 100vw;
+    }
+
+    .hao {
+        text-align: center;
+        font-size: 20vw;
+        font-weight:bold;
+        margin: 0;
+        border: 0;
+    }
+
+    .photo {
+
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding-left: 9vw;
+        width: fit-content;
+    }
+
+
+    .middle {
+        grid-row: 5/6;
+        grid-column: 2/4;
+        text-align: center;
+        font-size: 2.5vw;
+    }
+
+    .English1 {
+        text-decoration: none;
+
+    }
+
+
+    .introduction {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background: transparent;
+        height: 25vh;
+        margin-top: 50px;
+    }
+
+    .name1 {
+        font-size: 4vw;
+        font-weight: bold;
+        margin: 0;
+        border: 1px;
+        padding-left: 3vw;
+    }
+    .name2 {
+        padding-top: 0;
+        font-size: 2vw;
+        margin: 1px;
+        border: 1px;
+        letter-spacing: 4px;
+        padding-left: 0;
+    }
+
+    .social-icon {
+        width: 2vw;
+        height: 2vw;
+
+    }
+
+    .contacts {
+        padding-left: 5vw;
+    }
+
+    .footer1 {
+
+        grid-column: 1/4;
+        grid-row: 6/7;
+        background: black;
+
+    }
+
+
+
+}
+
+
+
+@media (min-width:1281px) { /* hi-res laptops and desktops */
+
+
+
+    .introduction {
+        padding-top: 1.6vw;
+        padding-left: 0;
+    }
+
+    .name1 {
+        font-size: 3vw;
+        padding-left: 9vw;
+    }
+
+    .name2 {
+        font-size: 1.5vw;
+        padding-left: 3vw;
+    }
+
+    .social-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .contacts {
+        padding-left: 7vw;
+    }
+
+    .publication {
+        font-size: 1.5vw;
+    }
+
+    .picture {
+        width: 12vw;
+        height: 12vw;
+        padding-top: 1.4vh;
+    }
+
+    .photo {
+        padding-left: 9.5vw;
+    }
+
+
+
+
+}
